@@ -39,7 +39,7 @@ class App extends Component {
       await Auth.currentSession();
       this.userHasAuthenticated(true);
     } catch (e) {
-      if (e !== 'No current user. Starting game') {
+      if (e === 'Starting game') {
         alert(e);
       }
     }
